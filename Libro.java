@@ -1,80 +1,97 @@
 public class Libro {
-    int isbn;
-    String titulo;
-    int nPag;
-    String editorial;
-    String autor;
-    int ed;
-    Boolean estado;
+    private String titulo;           // L-Título
+    private int isbn;             // L-ISBN
+    private String autor;            // L-Autor
+    private int nHojas;              // L-Nhojas
+    private String estado;           // L-Estado (Reservado, Disponible, En espera)
+    private int edicion;             // L-Edición
+    private String editorial;         // L-Editorial
+    private String proveedorNombre;   // P-Nombre (nombre del proveedor)
 
-    public Libro(int isbn, String titulo, int nPag, String editorial, String autor, int ed) {
-        this.isbn = isbn;
+    // Constantes para el estado
+    public static final String RESERVADO = "Reservado";
+    public static final String DISPONIBLE = "Disponible";
+    public static final String ESPERA = "En espera";
+
+    // Constructor
+    public Libro(String titulo, int isbn, String autor, int nHojas, 
+                 String estado, int edicion, String editorial, String proveedorNombre) {
         this.titulo = titulo;
-        this.nPag = nPag;
-        this.editorial = editorial;
+        this.isbn = isbn;
         this.autor = autor;
-        this.ed = ed;
-        this.estado = true;
+        this.nHojas = nHojas;
+        this.estado = estado;
+        this.edicion = edicion;
+        this.editorial = editorial;
+        this.proveedorNombre = proveedorNombre;
     }
 
-    // Getters
-    public int getIsbn() {
-        return isbn;
-    }
-
+    // Getters y Setters
     public String getTitulo() {
         return titulo;
-    }
-
-    public int getNPag() {
-        return nPag;
-    }
-
-    public String getEditorial() {
-        return editorial;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public int getEd() {
-        return ed;
-    }
-
-    public Boolean getEstado() {
-        return estado;
-    }
-
-    // Setters
-    public void setIsbn(int isbn) {
-        this.isbn = isbn;
     }
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public void setNPag(int nPag) {
-        this.nPag = nPag;
+    public int getIsbn() {
+        return isbn;
     }
 
-    public void setEditorial(String editorial) {
-        this.editorial = editorial;
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getAutor() {
+        return autor;
     }
 
     public void setAutor(String autor) {
         this.autor = autor;
     }
 
-    public void setEd(int ed) {
-        this.ed = ed;
+    public int getNHojas() {
+        return nHojas;
     }
 
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
+    public void setNHojas(int nHojas) {
+        this.nHojas = nHojas;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        if (estado.equals(RESERVADO) || estado.equals(DISPONIBLE) || estado.equals(ESPERA)) {
+            this.estado = estado;
+        } else {
+            throw new IllegalArgumentException("Estado inválido. Debe ser 'Reservado', 'Disponible' o 'En espera'.");
+        }
+    }
+
+    public int getEdicion() {
+        return edicion;
+    }
+
+    public void setEdicion(int edicion) {
+        this.edicion = edicion;
+    }
+
+    public String getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    public String getProveedorNombre() {
+        return proveedorNombre;
+    }
+
+    public void setProveedorNombre(String proveedorNombre) {
+        this.proveedorNombre = proveedorNombre;
     }
 }
-
-
-

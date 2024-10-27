@@ -1,28 +1,26 @@
 import java.time.LocalDateTime;
 
-public class Bibliotecario {
-    private String nombre; // B-Nombre
-    private String contraseña; // B-Contraseña
-    private LocalDateTime fechaCreacion; // B-Fecha de creación
-    private Boolean estado; // B-Estado true activo, false dado de baja
-    private String gmail; // B-Gmail
-    private String rol; // B-Rol
-    private int id; // B-Id
-    private String telefono; // B-Teléfono (opcional)
-    private String horarios; // B-Horarios
+public class Cliente {
+    private String nombre; // C-Nombre
+    private String contrasena; // C-Contraseña
+    private LocalDateTime fechaCreacion; // C-Fecha de creación
+    private Boolean estado; // C-Estado true activo, false dado de baja
+    private String gmail; // C-Gmail
+    private String rol; // C-Rol
+    private int id; // C-Id
+    private int telefono; // C-Telefono (opcional)
 
     // Constructor
-    public Bibliotecario(String nombre, String contrasena, LocalDateTime fechaCreacion, String gmail, int id) {
+    public Cliente(String nombre, String contrasena, LocalDateTime fechaCreacion, String gmail, int id) {
         this.nombre = nombre;
-        this.contraseña = contrasena;
+        this.contrasena = contrasena;
         this.fechaCreacion = fechaCreacion;
         this.estado = true;
         this.gmail = gmail;
-        this.rol = "Bibliotecario";
+        this.rol = "Cliente";
         this.id = id;
     }
-
-    // Getters y Setters
+    // Getters y Setters************************************************************************************************
     public String getNombre() {
         return nombre;
     }
@@ -31,12 +29,12 @@ public class Bibliotecario {
         this.nombre = nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public LocalDateTime getFechaCreacion() {
@@ -79,20 +77,12 @@ public class Bibliotecario {
         this.id = id;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
-    }
-
-    public String getHorarios() {
-        return horarios;
-    }
-
-    public void setHorarios(String horarios) {
-        this.horarios = horarios;
     }
 
     public void bajaUsuario() {
@@ -121,14 +111,6 @@ public class Bibliotecario {
     public void Pagar() {
         // se ingresan los datos de la tarjeta
         // Pagar
-    }
-
-    public void SolicitarInformes(){
-        // Se accede a gestión de stock
-    }
-    public void abmLibros(){
-        // Se accede a la clase libros y se crean, modifican o eliminan instancias
-        //se cargan en la Bd por medio de Gestión de stock
     }
 
 }

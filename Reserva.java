@@ -1,93 +1,82 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Reserva {
-    private int precio;
-    private Date fechaReserva;
-    private Date fechaDev;
-    private int isbn;
-    private int idUsuario;
-    private Boolean estado;// cancelada o activa
-    private Boolean estadoLibro;
-    private int id;
+    private int id;                   // R-Id
+    private double monto;             // R-Monto
+    private LocalDateTime fecha;             // R-Fecha
+    private LocalDateTime fechaDevolucion;   // R-Fecha Devolución
+    private int clienteId;            // C-Id (id del cliente que reserva)
+    private int transaccionId;        // T-Id (id de la transacción del pago)
+    private int libroISBN;            // L-ISBN (isbn del libro de la reserva)
 
     // Constructor
-    public Reserva(Date fechaReserva, Date fechaDev, int isbn, int idUsuario, Boolean estado, int id) {
-        this.fechaReserva = fechaReserva;
-        this.fechaDev = fechaDev;
-        this.isbn = isbn;
-        this.idUsuario = idUsuario;
-        this.estado = estado;
+    public Reserva(int id, double monto, LocalDateTime fecha, LocalDateTime fechaDevolucion, int clienteId, int transaccionId, int libroISBN) {
         this.id = id;
+        this.monto = monto;
+        this.fecha = fecha;
+        this.fechaDevolucion = fechaDevolucion;
+        this.clienteId = clienteId;
+        this.transaccionId = transaccionId;
+        this.libroISBN = libroISBN;
     }
 
-    // Getters
-    public int getPrecio() {
-        return this.precio;
-    }
-
-    public Date getFechaReserva() {
-        return this.fechaReserva;
-    }
-
-    public Boolean getEstadoLibro() {
-        return this.estadoLibro;
-    }
-
-    public Date getFechaDev() {
-        return this.fechaDev;
-    }
-
-    public int getIsbn() {
-        return this.isbn;
-    }
-
-    public int getIdUsuario() {
-        return this.idUsuario;
-    }
-
-    public Boolean getEstado() {
-        return this.estado;
-    }
-
+    // Getters y Setters
     public int getId() {
-        return this.id;
-    }
-
-    // Setters
-    public void setFechaReserva(Date fechaReserva) {
-        this.fechaReserva = fechaReserva;
-    }
-
-    public void setEstadoLibro(Boolean estadoLibro) {
-        this.estadoLibro = estadoLibro;
-    }
-
-    public void setFechaDev(Date fechaDev) {
-        this.fechaDev = fechaDev;
-    }
-
-    public void setIsbn(int isbn) {
-        this.isbn = isbn;
-    }
-
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
+        return id;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public void MostrarReserva() {
-        // se accede a los get
+    public double getMonto() {
+        return monto;
     }
+
+    public void setMonto(double monto) {
+        this.monto = monto;
+    }
+
+    public LocalDateTime getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
+    }
+
+    public LocalDateTime getFechaDevolucion() {
+        return fechaDevolucion;
+    }
+
+    public void setFechaDevolucion(LocalDateTime fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
+    }
+
+    public int getClienteId() {
+        return clienteId;
+    }
+
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
+    }
+
+    public int getTransaccionId() {
+        return transaccionId;
+    }
+
+    public void setTransaccionId(int transaccionId) {
+        this.transaccionId = transaccionId;
+    }
+
+    public int getLibroISBN() {
+        return libroISBN;
+    }
+
+    public void setLibroISBN(int libroISBN) {
+        this.libroISBN = libroISBN;
+    }
+
+
 
 }
