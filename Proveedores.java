@@ -1,26 +1,36 @@
 public class Proveedores {
     private String telefono; // P-Telefono
-    private String nombre;   // P-Nombre
-    private String email;    // P-Email
+    private String nombre; // P-Nombre
+    private String email; // P-Email
+    private int id; // Id del proveedor
 
     // Constructor
-    public Proveedores(String telefono, String nombre, String email) {
+    public Proveedores(String telefono, String nombre, String email, int id) {
         this.telefono = telefono;
         this.nombre = nombre;
         this.email = email;
+        this.id = id;
     }
 
     // Getters y Setters
     public String getTelefono() {
-        return telefono;
+        return this.telefono;
+    }
+
+    public int getId() {
+        return this.id;
     }
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -28,7 +38,7 @@ public class Proveedores {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
