@@ -3,13 +3,14 @@ public class Proveedores {
     private String nombre; // P-Nombre
     private String email; // P-Email
     private int id; // Id del proveedor
-
+    private String linkProveedor; //Link del proveedor
     // Constructor
-    public Proveedores(String telefono, String nombre, String email, int id) {
+    public Proveedores(String link ,String telefono, String nombre, String email, int id) {
         this.telefono = telefono;
         this.nombre = nombre;
         this.email = email;
         this.id = id;
+        this.link = link;
     }
 
     // Getters y Setters
