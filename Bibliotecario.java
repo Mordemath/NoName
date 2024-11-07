@@ -109,7 +109,7 @@ public class Bibliotecario {
     }
 
     public void VerReservas() {
-        // Se accede a las reservas y se estraen las del usuario
+        // Se accede a las reservas y se extraen las del usuario
     }
 
     public void CancelarReserva() {

@@ -10,7 +10,7 @@ public class Proveedores {
         this.nombre = nombre;
         this.email = email;
         this.id = id;
-        this.link = link;
+        this.linkProveedor = link;
     }
 
     // Getters y Setters
@@ -20,6 +20,9 @@ public class Proveedores {
 
     public int getId() {
         return this.id;
+    }
+    public String getLinkProvedor() {
+        return this.linkProveedor;
     }
 
     public void setTelefono(String telefono) {
@@ -44,6 +47,10 @@ public class Proveedores {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setLinkProveedor(String link) {
+        this.linkProveedor = link;
     }
 
     @Override
