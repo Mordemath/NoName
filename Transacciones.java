@@ -56,7 +56,5 @@ public class Transacciones {
 
     public void setProveedorNombre(String proveedorNombre) {
         this.proveedorNombre = proveedorNombre;
-    }
-
-    
+    }    
 }

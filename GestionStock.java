@@ -1,7 +1,6 @@
 public class GestionStock {
     private int cantidadLibros; // G-Cantidad de Libros
     private int codigoDescuento; // G-Código descuento
-
     // Constructor
     public GestionStock(int cantidadLibros, int codigoDescuento) {
         this.cantidadLibros = cantidadLibros;

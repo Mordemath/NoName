@@ -52,7 +52,14 @@ public class Proveedores {
     public void setLinkProveedor(String link) {
         this.linkProveedor = link;
     }
+    public void VendrLibro(){
+    }
+    public void generarRecibo(){
 
+    }
+    public void MostrarCatalogo(){
+        
+    }
     @Override
     public String toString() {
         return "Proveedores{" +
