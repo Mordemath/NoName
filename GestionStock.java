@@ -35,8 +35,5 @@ public class GestionStock {
         // la compras y guardan en stock
     }
 
-    public void DatosProveedores(){
-        //muestra los datos de los proveedores
-    }
-    
+
 }
