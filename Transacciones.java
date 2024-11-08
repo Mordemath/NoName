@@ -46,7 +46,6 @@ public class Transacciones {
         //metodo que permite descargar el pago
      }
 
-<<<<<<< HEAD
     public String getProveedorNombre() {
 
     }
@@ -54,8 +53,4 @@ public class Transacciones {
     public void setProveedorNombre(String proveedorNombre) {
 
     }    
-=======
-
-    
->>>>>>> 2aedce6956dd8b6aa1fc3d8da9d8c95acedb8599
 }
