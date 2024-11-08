@@ -5,16 +5,12 @@ public class Transacciones {
     private double monto;          // T-Monto
     private LocalDateTime fecha;          // T-Fecha
     private int id;                // T-Id
-    private Integer bibliotecarioId; // B-Id (opcional)
-    private String proveedorNombre; // P-Nombre (opcional)
 
     // Constructor
-    public Transacciones(double monto, LocalDateTime fecha, int id, Integer bibliotecarioId, String proveedorNombre) {
+    public Transacciones(double monto, LocalDateTime fecha, int id) {
         this.monto = monto;
         this.fecha = fecha;
         this.id = id;
-        this.bibliotecarioId = bibliotecarioId;
-        this.proveedorNombre = proveedorNombre;
     }
 
     // Getters y Setters
@@ -42,19 +38,19 @@ public class Transacciones {
         this.id = id;
     }
 
-    public Integer getBibliotecarioId() {
-        return bibliotecarioId;
+    public void imprimirFactura(){
+        //metodo que imprime la factura
     }
 
-    public void setBibliotecarioId(Integer bibliotecarioId) {
-        this.bibliotecarioId = bibliotecarioId;
-    }
+    public void descargarPago(){
+        //metodo que permite descargar el pago
+     }
 
     public String getProveedorNombre() {
-        return proveedorNombre;
+
     }
 
     public void setProveedorNombre(String proveedorNombre) {
-        this.proveedorNombre = proveedorNombre;
+
     }    
 }

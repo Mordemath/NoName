@@ -99,6 +99,9 @@ public class Bibliotecario {
         this.setEstado(false);
         // Se vuelve al main************
     }
+    public void modificarUsuario(){
+        //Aca se llama a todos los set para poder modificar sus atributos
+    }
 
     public void pedirReserva() {
         // Se accede al catalogo
@@ -118,9 +121,12 @@ public class Bibliotecario {
         // se setea el estado de la reserva a false
     }
 
-    public void Pagar() {
+    public void  cobraPago() {
         // se ingresan los datos de la tarjeta
         // Pagar
+    }
+    public void gestionDeCaja(){
+        //Este metodo se usa para ver todos los datos de las cajas echas (Consultas)
     }
 
     public void SolicitarInformes(){
