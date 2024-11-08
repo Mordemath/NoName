@@ -140,7 +140,10 @@ public class Bibliotecario {
     //Se realizan pagos a proveedores y cosas de la biblioteca
     }
     public void BuscarLibro(){
-    
+    // Se realiza la busqueda de un libro por id o por nombre
+    }
+    public void contactarProveedores(){
+        //contacta a los proveedores mediante este metodo
     }
     public void GestionDeCaja(){
     //Cierre de caja
