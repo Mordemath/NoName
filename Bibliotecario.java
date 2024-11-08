@@ -136,5 +136,13 @@ public class Bibliotecario {
         // Se accede a la clase libros y se crean, modifican o eliminan instancias
         //se cargan en la Bd por medio de Gestión de stock
     }
-
+    public void RealizarPago(){
+    //Se realizan pagos a proveedores y cosas de la biblioteca
+    }
+    public void BuscarLibro(){
+    
+    }
+    public void GestionDeCaja(){
+    //Cierre de caja
+    }
 }
