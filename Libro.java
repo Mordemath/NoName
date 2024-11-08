@@ -84,12 +84,4 @@ public class Libro {
     public void setEditorial(String editorial) {
         this.editorial = editorial;
     }
-
-    public String getProveedorNombre() {
-        return proveedorNombre;
-    }
-
-    public void setProveedorNombre(String proveedorNombre) {
-        this.proveedorNombre = proveedorNombre;
-    }
 }
