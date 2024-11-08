@@ -118,4 +118,7 @@ public class Cliente {
     public void buscarLibro(){
         //Metodo para buscar libros
     }
+    public void recibirNotificaciones(){
+        //metodo que hacer que el usuario reciba notificaciones
+    }
 }
