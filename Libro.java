@@ -6,7 +6,6 @@ public class Libro {
     private String estado;           // L-Estado (Reservado, Disponible, En espera)
     private int edicion;             // L-Edición
     private String editorial;         // L-Editorial
-    private String proveedorNombre;   // P-Nombre (nombre del proveedor)
 
     // Constantes para el estado
     public static final String RESERVADO = "Reservado";
@@ -15,7 +14,7 @@ public class Libro {
 
     // Constructor
     public Libro(String titulo, int isbn, String autor, int nHojas, 
-                 String estado, int edicion, String editorial, String proveedorNombre) {
+                 String estado, int edicion, String editorial) {
         this.titulo = titulo;
         this.isbn = isbn;
         this.autor = autor;
@@ -23,7 +22,6 @@ public class Libro {
         this.estado = estado;
         this.edicion = edicion;
         this.editorial = editorial;
-        this.proveedorNombre = proveedorNombre;
     }
 
     // Getters y Setters
