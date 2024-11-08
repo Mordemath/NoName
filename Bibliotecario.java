@@ -99,6 +99,9 @@ public class Bibliotecario {
         this.setEstado(false);
         // Se vuelve al main************
     }
+    public void modificarUsuario(){
+        //Aca se llama a todos los set para poder modificar sus atributos
+    }
 
     public void pedirReserva() {
         // Se accede al catalogo
