@@ -11,8 +11,6 @@ public class Transacciones {
         this.monto = monto;
         this.fecha = fecha;
         this.id = id;
-        this.bibliotecarioId = bibliotecarioId;
-        this.proveedorNombre = proveedorNombre;
     }
 
     // Getters y Setters
