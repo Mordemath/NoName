@@ -118,9 +118,12 @@ public class Bibliotecario {
         // se setea el estado de la reserva a false
     }
 
-    public void Pagar() {
+    public void  cobraPago() {
         // se ingresan los datos de la tarjeta
         // Pagar
+    }
+    public void gestionDeCaja(){
+        //Este metodo se usa para ver todos los datos de las cajas echas (Consultas)
     }
 
     public void SolicitarInformes(){
