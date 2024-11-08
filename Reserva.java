@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 public class Reserva {
     private int id;                   // R-Id
     private double monto;             // R-Monto
-    private LocalDateTime fecha;             // R-Fecha
+    private LocalDateTime fechaReserva;             // R-Fecha
     private LocalDateTime fechaDevolucion;   // R-Fecha Devolución
 
     // Constructor
