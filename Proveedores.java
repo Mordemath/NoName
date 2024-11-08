@@ -61,4 +61,15 @@ public class Proveedores {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public void venderLibro(){
+        //metodo de venta del libro
+    }
+    public void generarReciboDelPedido(){
+        //metodo que genera el recibo del pedido
+    }
+
+    public void mostrarCatalago(){
+        //Metodo de mostrarCatalago
+    }
 }
