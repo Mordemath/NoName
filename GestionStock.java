@@ -35,14 +35,6 @@ public class GestionStock {
         // la compras y guardan en stock
     }
 
-    public void Abm() {
-        // alta de libros en stock a travez de proveedores y la clase libros
-        // se crea nuevos titulos y ejemplares en la bd
-        // baja libro(stock)
-        // modificar reserva(precio)
-        //Se cargan en la bd las nuevas instancias
-    }
-
     public void DatosProveedores(){
         //muestra los datos de los proveedores
     }
