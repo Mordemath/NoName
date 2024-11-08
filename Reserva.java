@@ -47,30 +47,8 @@ public class Reserva {
         this.fechaDevolucion = fechaDevolucion;
     }
 
-    public int getClienteId() {
-        return clienteId;
+    public void ticketReserva(){
+        //Metodo que emite el ticket de reserva
     }
-
-    public void setClienteId(int clienteId) {
-        this.clienteId = clienteId;
-    }
-
-    public int getTransaccionId() {
-        return transaccionId;
-    }
-
-    public void setTransaccionId(int transaccionId) {
-        this.transaccionId = transaccionId;
-    }
-
-    public int getLibroISBN() {
-        return libroISBN;
-    }
-
-    public void setLibroISBN(int libroISBN) {
-        this.libroISBN = libroISBN;
-    }
-
-
 
 }
