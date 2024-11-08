@@ -89,6 +89,9 @@ public class Cliente {
         this.setEstado(false);
         // Se vuelve al main************
     }
+    public void modificarUsuario(){
+        //Se llaman a todos los set para modificar el usuario
+    }
 
     public void pedirReserva() {
         // Se accede al catalogo
@@ -108,9 +111,11 @@ public class Cliente {
         // se setea el estado de la reserva a false
     }
 
-    public void Pagar() {
+    public void realizarPago() {
         // se ingresan los datos de la tarjeta
         // Pagar
     }
-
+    public void buscarLibro(){
+        //Metodo para buscar libros
+    }
 }
