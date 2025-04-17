@@ -62,14 +62,15 @@ public class Proveedores {
                 '}';
     }
 
-    public void venderLibro(){
-        //metodo de venta del libro
-    }
-    public void generarReciboDelPedido(){
-        //metodo que genera el recibo del pedido
+    public void venderLibro() {
+        System.out.println("Proveedor " + nombre + " vende libro (simulado)");
     }
 
-    public void mostrarCatalago(){
-        //Metodo de mostrarCatalago
+    public void generarReciboDelPedido() {
+        System.out.println("Recibo de pedido generado para proveedor " + nombre);
+    }
+
+    public void mostrarCatalago() {
+        System.out.println("Catálogo de proveedor " + nombre + " en " + linkProveedor);
     }
 }
