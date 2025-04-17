@@ -26,13 +26,12 @@ public class GestionStock {
     }
 
     public void GenerarInforme() {
-        // accede a la base de datos
-        // Genera informe
+        System.out.println("Informe: existen " + cantidadLibros + " libros en stock.");
     }
 
     public void Notificaciónes() {
-        // envía notificaciónes al bibliotecario sobre stock bajo, cuando se acreditan
-        // la compras y guardan en stock
+        if (cantidadLibros < 5) System.out.println("Alerta: stock bajo.");
+        else System.out.println("Stock suficiente.");
     }
 
 
