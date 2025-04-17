@@ -39,11 +39,13 @@ public class Transacciones {
     }
 
     public void imprimirFactura(){
-        //metodo que imprime la factura
+        System.out.println("Factura[ID=" + id + ", Monto=" + monto + ", Fecha=" + fecha + "]");
+        //Imprime el pdf de la factura
     }
 
     public void descargarPago(){
-        //metodo que permite descargar el pago
+         System.out.println("Descargando comprobante pago ID=" + id);
+        //Descarga el comprobante de pago
      }
 
 
