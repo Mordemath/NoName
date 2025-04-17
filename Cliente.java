@@ -86,11 +86,16 @@ public class Cliente {
     }
 
     public void bajaUsuario() {
-        this.setEstado(false);
-        // Se vuelve al main************
+        estado = false;
+        System.out.println("Cliente " + id + " dado de baja.");
     }
     public void modificarUsuario(){
-        //Se llaman a todos los set para modificar el usuario
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nuevo nombre: ");
+        this.nombre = sc.nextLine();
+        System.out.print("Nuevo Gmail: ");
+        this.gmail = sc.nextLine();
+        System.out.println("Perfil actualizado: " + nombre + ", " + gmail);
     }
 
     public void pedirReserva() {
