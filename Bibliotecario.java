@@ -1,5 +1,5 @@
 import java.time.LocalDateTime;
-
+import java.util.Scanner;
 public class Bibliotecario {
     private String nombre; // B-Nombre
     private String contraseña; // B-Contraseña
@@ -96,56 +96,85 @@ public class Bibliotecario {
     }
 
     public void bajaUsuario() {
-        this.setEstado(false);
-        // Se vuelve al main************
+        if (!estado) System.out.println("Usuario " + id + " ya dado de baja.");
+            else {
+                estado = false;
+                System.out.println("Usuario " + id + " dado de baja con éxito.");
+            }
     }
-    public void modificarUsuario(){
-        //Aca se llama a todos los set para poder modificar sus atributos
+    public void modificarUsuario(){ //Pide los datos y los modifica despues en la base de datos
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nuevo nombre: "); 
+        this.nombre = sc.nextLine();
+        System.out.print("Nuevo Gmail: "); 
+        this.gmail = sc.nextLine();
+        System.out.print("Nuevo telefono: "); 
+        this.telefono = sc.nextLine();
+        System.out.println("Datos actualizados: " + nombre + ", " + gmail + ", " + telefono);
     }
 
-    public void pedirReserva() {
-        // Se accede al catalogo
-        // Se seleccióna el libro
-        // se comunica con gestión de stock para ver si el libro está disponible
-        // se crea una nueva reserva
-        // notificación
+    public void pedirReserva() { // Scanea el id y se realiza la reserva si esta disponible
+        Scanner sc = new Scanner(System.in);
+        System.out.print("ID libro a reservar: ");
+        int libroId = sc.nextInt();
+        if (GestionStock.estaDisponible(libroId)) {
+            Reserva reserva = new Reserva(libroId, 0.0, LocalDateTime.now(), LocalDateTime.now().plusDays(7));
+            System.out.println("Reserva creada. Detalles:");
+            reserva.ticketReserva();
+            GestionStock.decrementar(libroId);
+        } else System.out.println("Libro " + libroId + " no disponible.");
     }
 
     public void VerReservas() {
-        // Se accede a las reservas y se extraen las del usuario
+        System.out.println("Mostrando reservas almacenadas en memoria.");
     }
 
-    public void CancelarReserva() {
-        // Se accede a ver reservas
-        // Se seleccióna la reserva
-        // se setea el estado de la reserva a false
+    public void CancelarReserva() { //Metodo de cancelar la reserva
+        Scanner sc = new Scanner(System.in);
+        System.out.print("ID reserva a cancelar: "); 
+        int resId = sc.nextInt();
+        System.out.println("Reserva " + resId + " cancelada (simulado). ");
     }
 
-    public void  cobraPago() {
-        // se ingresan los datos de la tarjeta
-        // Pagar
+    public void  cobraPago() { //Ingresa el ID para realizar la reserva
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese ID reserva para cobro: ");
+        int resId = sc.nextInt();
+        System.out.print("Monto a cobrar: "); 
+        double monto = sc.nextDouble();
+        Transacciones tx = new Transacciones(monto, LocalDateTime.now(), resId);
+        tx.imprimirFactura();
+        tx.descargarPago();
     }
-    public void gestionDeCaja(){
-        //Este metodo se usa para ver todos los datos de las cajas echas (Consultas)
+    public void gestionDeCaja() {
+        System.out.println("Generando resumen de caja (simulado)...");
     }
 
-    public void SolicitarInformes(){
-        // Se accede a gestión de stock
+    public void SolicitarInformes() {
+        GestionStock gs = new GestionStock(0, 0);
+        gs.GenerarInforme();
     }
-    public void abmLibros(){
-        // Se accede a la clase libros y se crean, modifican o eliminan instancias
-        //se cargan en la Bd por medio de Gestión de stock
+      public void abmLibros() {
+        System.out.println("ABM de libros (crear/modificar/eliminar - simulado).");
     }
-    public void RealizarPago(){
-    //Se realizan pagos a proveedores y cosas de la biblioteca
+
+    public void RealizarPago() {
+        System.out.println("Pago a proveedores realizado (simulado).");
     }
-    public void BuscarLibro(){
-    // Se realiza la busqueda de un libro por id o por nombre
+
+    public void BuscarLibro() { //logica para buscar un libro
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Criterio busqueda: "); 
+        String criterio = sc.nextLine();
+        System.out.println("Resultados de busqueda (simulado) para: " + criterio);
     }
-    public void contactarProveedores(){
-        //contacta a los proveedores mediante este metodo
+
+    public void contactarProveedores() {
+        Proveedores p = new Proveedores("www.link", "12345", "Proveedor1", "prov@dominio", 1);
+        p.mostrarCatalogo();
     }
-    public void GestionDeCaja(){
-    //Cierre de caja
+
+    public void GestionDeCaja() {
+        System.out.println("Cierre de caja diario (simulado)");
     }
 }
