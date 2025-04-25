@@ -6,8 +6,6 @@ public class Libro {
     private String estado;           // L-Estado (Reservado, Disponible, En espera)
     private int edicion;             // L-Edición
     private String editorial;         // L-Editorial
-    private string proveedores;       //nombre del proveedor
-    private int bibliotecariosId;     //id del bibliotecario
     // Constantes para el estado
     public static final String RESERVADO = "Reservado";
     public static final String DISPONIBLE = "Disponible";
