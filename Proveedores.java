@@ -4,7 +4,7 @@ public class Proveedores {
     private String email; // P-Email
     private int id; // Id del proveedor
     private String linkProveedor; //Link del proveedor
-    private int BibliotecarioId;  // último bibliotecario que lo contactó
+   
     // Constructor
     public Proveedores(String link ,String telefono, String nombre, String email, int id) {
         this.telefono = telefono;
