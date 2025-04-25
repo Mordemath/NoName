@@ -5,10 +5,7 @@ public class Reserva {
     private double monto;             // R-Monto
     private LocalDateTime fechaReserva;             // R-Fecha
     private LocalDateTime fechaDevolucion;   // R-Fecha Devolución
-    private int idCliente;
-    private int idTransaccion;
-    private int idBibliotecario;
-    private int isbnLibro;
+
     // Constructor
     public Reserva(int id, double monto, LocalDateTime fecha, LocalDateTime fechaDevolucion, int idCliente, int idBibliotecario, int idTransaccion, int isbnLibro) {
         this.id = id;
