@@ -9,7 +9,7 @@ public class Cliente {
     private String rol; // C-Rol
     private int id; // C-Id
     private int telefono; // C-Telefono (opcional)
-    private int idBibliotecario; //id de bibliotecarios
+   
     // Constructor
     public Cliente(String nombre, String contrasena, LocalDateTime fechaCreacion, String gmail, int id) {
         this.nombre = nombre;
