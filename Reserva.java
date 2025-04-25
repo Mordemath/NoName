@@ -15,6 +15,10 @@ public class Reserva {
         this.monto = monto;
         this.fecha = fecha;
         this.fechaDevolucion = fechaDevolucion;
+        this.idCliente = idCliente;
+        this.IdBibliotecario = idBibliotecario;
+        this.isbnLibro = isbnLibro;
+        this.idTransaccion = idTransaccion;
     }
 
     // Getters y Setters
