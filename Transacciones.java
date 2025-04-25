@@ -5,20 +5,12 @@ public class Transacciones {
     private double monto;          // T-Monto
     private LocalDateTime fecha;          // T-Fecha
     private int id;                // T-Id
-    private int idCliente;
-    private int idTransaccion;
-    private int idBibliotecario;
-    private int idFactura;
 
     // Constructor
-    public Transacciones(double monto, LocalDateTime fecha, int id,int idCliente, int idTransaccion, int idBibliotecario, int idFactura) {
+    public Transacciones(double monto, LocalDateTime fecha, int id) {
         this.monto = monto;
         this.fecha = fecha;
         this.id = id;
-        this.idTransaccion = idTransaccion;
-        this.idBibliotecario = idBibliotecario;
-        this.idFactura = idFactura;
-        this.idCliente = idCliente;
     }
 
     // Getters y Setters
