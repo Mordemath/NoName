@@ -7,15 +7,11 @@ public class Reserva {
     private LocalDateTime fechaDevolucion;   // R-Fecha Devolución
 
     // Constructor
-    public Reserva(int id, double monto, LocalDateTime fecha, LocalDateTime fechaDevolucion, int idCliente, int idBibliotecario, int idTransaccion, int isbnLibro) {
+    public Reserva(int id, double monto, LocalDateTime fecha, LocalDateTime fechaDevolucion) {
         this.id = id;
         this.monto = monto;
         this.fecha = fecha;
         this.fechaDevolucion = fechaDevolucion;
-        this.idCliente = idCliente;
-        this.IdBibliotecario = idBibliotecario;
-        this.isbnLibro = isbnLibro;
-        this.idTransaccion = idTransaccion;
     }
 
     // Getters y Setters
